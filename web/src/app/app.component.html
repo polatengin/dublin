@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="jumbotron">
+    <h3>{{title}}</h3>
+  </div>
+  <b>Çalışan Listesi:</b>
+  <select [(ngModel)]="selectedEmployee" (change)="SetCurrentProject()">
+    <option *ngFor="let person of employeeList" [ngValue]="person">
+      {{person.Name}}
+    </option>
+  </select>
+  <input type="button" class="btn btn-success" [disabled]="selectedEmployee==null || form.invalid" value="Güncelle" (click)="UpdateEmployee()">
+  <hr>
+  <form #form="ngForm">
+    <div *ngIf="selectedEmployee!=null">
+      <table>
+        <tr>
+          <td>
+            *Adı:
+          </td>
+          <td>
+            <input type="text" [(ngModel)]="selectedEmployee.Name" name="Name" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            *Age:
+          </td>
+          <td>
+            <input type="text" [OnlyNumber]="true" [(ngModel)]="selectedEmployee.Age" name="Age" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            *Salary:
+          </td>
+          <td>
+            <input type="text" [OnlyNumber]="true" [(ngModel)]="selectedEmployee.Salary" name="Salary" required>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            *Proje Adı:
+          </td>
+          <td>
+            <select [(ngModel)]="selectedProject" name="Project" required>
+              <option *ngFor="let project of projectList" [ngValue]="project">
+                {{project.Name}}
+              </option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
