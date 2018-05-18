@@ -2,7 +2,7 @@
 
 *20 Eylül 2017* tarihinde **Microsoft Türkiye** binasında sevgili arkadaşım [Bora Kaşmer](http://www.borakasmer.com) ile birlikte gerçekleştirdiğimiz etkinliğin kodları.
 
-*Not : Kodları çalıştırmadan önce aşağıdaki kodları **Terminal**, **Command Prompt** veya **Powershell** penceresinde çalıştırmanız gerekiyor;*
+*Not : Kodları çalıştırmadan önce aşağıdaki komutları **Terminal**, **Command Prompt** veya **Powershell** penceresinde çalıştırmanız gerekiyor;*
 
 ```
 mkdir api
